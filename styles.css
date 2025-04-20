@@ -1,0 +1,246 @@
+:root {
+  /* Brand Colors */
+  --coffee-brown: #4b3621; /* Main text, logo, buttons */
+  --cream-beige: #f5f0eb; /* Background, soft elements */
+  --caramel: #c89f7d; /* Highlight, button hovers */
+  --latte-white: #ffffff; /* Secondary background */
+  --muted-sage: #a7b1a3; /* Accent color (icons/links) */
+  --rosewood-pink: #c28b8b; /* Soft feminine touch/accent */
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+
+  /* Gradient for Background */
+  --gradient-bg: linear-gradient(
+    135deg,
+    var(--coffee-brown) 30%,
+    var(--cream-beige) 70%
+  );
+
+  /* Font Family */
+  --font-family: "DM Sans", sans-serif;
+
+  /* Font Sizes */
+  --font-size-display-4: 5rem; /* Display-4 */
+  --font-size-display-3: 4.5rem; /* Display-3 */
+  --font-size-display-2: 4.25rem; /* Display-2 */
+  --font-size-display-1: 4rem; /* Display-1 */
+  --font-size-headline-1: 3rem; /* Headline 1 */
+  --font-size-headline-2: 2.5rem; /* Headline 2 */
+  --font-size-title-1: 2rem; /* Title 1 */
+  --font-size-title-2: 1.75rem; /* Title 2 */
+  --font-size-title-3: 1.5rem; /* Title 3 */
+  --font-size-title-4: 1.25rem; /* Title 4 */
+  --font-size-body-1: 1.125rem; /* Body 1 */
+  --font-size-body-2: 1rem; /* Body 2 */
+  --font-size-body-3: 0.875rem; /* Body 3 */
+  --font-size-body-4: 0.75rem; /* Body 4 */
+  --font-size-label-1: 1rem; /* Label 1 */
+  --font-size-label-2: 0.875rem; /* Label 2 */
+
+  /* Font Weight */
+  --font-weight-regular: 400; /* Regular */
+  --font-weight-medium: 500; /* Medium */
+  --font-weight-bold: 700; /* Bold */
+
+  /* Line Height */
+  --line-height-1: 1em; /* Line Height 1 */
+  --line-height-2: 1.2em; /* Line Height 2 */
+  --line-height-3: 1.5em; /* Line Height 3 */
+  --line-height-4: 1.6em; /* Line Height 4 */
+  --line-height-5: 1.85em; /* Line Height 5 */
+  --line-height-6: 1.9em; /* Line Height 6 */
+
+  /* Letter Spacing */
+  --letter-spacing-1: 0.15em; /* Letter Spacing 1 */
+  --letter-spacing-2: 0.4em; /* Letter Spacing 2 */
+  --letter-spacing-3: 0.2em; /* Letter Spacing 3 */
+  --letter-spacing-4: 0.3em; /* Letter Spacing 4 */
+  --letter-spacing-5: 3px; /* Letter Spacing 5 */
+
+  /* Spacing */
+  --section-space: 70px; /* Section Space */
+
+  /* Shadow */
+  /* Soft shadow for buttons and containers */
+  --shadow-soft: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle, soft shadow */
+  --shadow-medium: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+  --shadow-heavy: 0px 12px 24px rgba(0, 0, 0, 0.1); /* Stronger shadow for emphasis */
+
+  /* Shadow for hover effect on buttons */
+  --shadow-button-hover: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Gentle hover shadow */
+
+  /* border radius */
+  --radius-24: 24px; /* Large rounded corners */
+  --radius-circle: 50%; /* Circle shape for buttons */
+
+  /*transition */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease; /* Transition for hover effects */
+  --transition-3: 1000ms ease; /* Transition for larger elements */
+}
+
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--coffee-brown);
+  color: var(--cream-beige);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-5);
+  overflow: hidden;
+  height: 300vh;
+}
+
+body.loaded {
+  overflow: overlay;
+}
+
+body.nav-active {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--caramel);
+}
+
+/*----Preload-----*/
+
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--caramel);
+  z-index: grid;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  transition: var(--transition-2);
+  text-align: center;
+}
+
+.preload > * {
+  transition: var(--transition-1);
+}
+
+.preload .preload > * {
+  opacity: 0;
+}
+
+.preload .loaded {
+  transition-delay: 250ms;
+  transform: translateY(100%);
+}
+
+.circle {
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radius-circle);
+  border: 3px solid var(--cream-beige);
+  border-block-start-color: var(--smoky-black-1);
+  margin-block-end: 15px;
+  animation: rotate360 1s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.preload .text {
+  background-image: var(--gradient-bg);
+  background-size: 500%;
+  font-size: calc(2rem + 3vm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 16px;
+  padding-inline-start: 16px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5px var(--smoky-black-1);
+  animation: loadingText linear 2s infinite;
+}
+
+@keyframes loadingText {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
