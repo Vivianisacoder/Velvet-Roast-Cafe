@@ -165,3 +165,23 @@ Caramel Highlight, button hovers #C89F7D
 Latte White Secondary background #FFFFFF
 Muted Sage Accent color (icons/links) #A7B1A3
 Rosewood Pink Soft feminine touch/accent #C28B8B
+
+Warm neutral base — like cream, almond milk, or a soft latte.
+
+Velvety brown — rich coffee/chocolate tone.
+
+Muted rose or blush — subtle feminine touch, velvet-inspired.
+
+Dark espresso or charcoal — for contrast.
+
+Gold or beige accents — optional for a premium feel.
+
+🎨 Updated Color Palette:
+
+Element Color
+Background #f5efe6 (latte cream)
+Primary Text #3e2c23 (espresso brown)
+Accent (buttons, highlights) #a47551 (warm cinnamon)
+Subtle Pink Tint #e8d7cd (blush velvet)
+Preloader BG #3e2c23 (rich dark brown)
+Preloader Text #f5efe6 (creamy white)

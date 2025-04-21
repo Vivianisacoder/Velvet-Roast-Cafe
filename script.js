@@ -3,12 +3,12 @@
 /**
  * PRELOAD
  *
- * loading will be end after document is loaded
+ * loading will end after the document is fully loaded
  */
 
-const preloader = document.querySelector("[data-preload]");
+const preloader = document.querySelector("[data-preaload]");
 
 window.addEventListener("load", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
+  preloader.classList.add("loaded"); // Add 'loaded' class to preloader
+  document.body.classList.add("loaded"); // Add 'loaded' class to body
 });
